@@ -9,7 +9,7 @@
     <title>Sidebars · Bootstrap v5.0</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
-		 <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
@@ -20,7 +20,7 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Bootstrap core CSS -->
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -104,18 +104,19 @@
 
 <div class="d-flex flex-column p-3 text-white bg-dark" style="width: 280px;">
   <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg> -->
     <span class="fs-4">Charged Up</span>
   </a>
   <hr>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a href="index.html" class="nav-link active">
+      <a href="index.html" class="nav-link text-white">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
         Home
       </a>
     </li>
     <li>
-      <a href="carinfo.html" class="nav-link text-white">
+      <a href="cardata.html" class="nav-link active">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
         Cars
       </a>
@@ -126,7 +127,6 @@
         Charging Stations
       </a>
     </li>
-
   </ul>
 
 </div>
@@ -134,56 +134,40 @@
 <div class="b-example-divider"></div>
 
 <div class="container gy-10">
-
   <div class="p-0 mb-4 bg-light rounded-3 border justify-content-center">
     <div class="row align-items-md-stretch">
       <div class="col">
-        <div class="h-100 p-2 bg-dark text-white rounded-3 justify-content-center">
-      <h1 class="display-5 fw-bold"><center><img src="assets/i/Charged_Up.png" height="250"></center></h1>
-      <!-- <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p> -->
-    </div>
-    </div>
+        <div class="h-100 p-5 bg-dark text-white rounded-3 justify-content-center">
+      <h1 class="display-5 fw-bold"><center>Charged Up Dashboard: Car Data</h1>
+      <ul class="nav alert-secondary justify-content-center mb-auto">
+  <li class="nav-item">
+    <a class="nav-link link-dark" aria-current="page" href="carinfo.html">Models</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-dark" aria-current="page" href="manufacturers.html">Manufacturers</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-dark" aria-current="page" href="radial.html">Radial Chart</a>
+  </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="row align-items-md-stretch">
+<div class="col"><center>
+<div class="h-100 p-5 bg-light border rounded-3">
+
+<center>
+  <h3>Choose A Manufacturer</h3>
+  <select id="selDataset" onchange="optionChanged(this.value)" class="form-select form-select-sm w-25"></select>
+  <canvas id="myChart"></canvas>
+</center>
     </div>
 </div>
-<div class="p-5 mb-4 bg-light rounded-3 border">
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Welcome, User!</h1>
-        <p class="col-md-8 fs-4">The team will take EV (electric vehicle) charging station data and show the efficiencies of different EV models and how each model would perform traveling across the country.</p>
 
-      </div>
-    </div>
-
-    <div class="row align-items-md-stretch">
-      <div class="col-md-4">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Question 1</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Question 2</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Question 3</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-      crossorigin=""></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script type="text/javascript" src="assets/static/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
