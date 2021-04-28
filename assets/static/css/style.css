@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import 'framework.css';
-/* 
+/*
 	Table of contents:
 	1. Common styles
 	2. Common responsive styles
@@ -4970,4 +4970,10 @@ b, strong {
   .application_26 img {
     max-height: 80vh;
   }
+}
+
+#map,
+body,
+html {
+  height: 100%;
 }
