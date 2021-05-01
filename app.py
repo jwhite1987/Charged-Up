@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
-CLIENT = MongoClient("mongodb+srv://jimmywhite87:Ruger2012!?@charged-up.yt7ie.mongodb.net/charged-up?retryWrites=true&w=majority")
+CLIENT = MongoClient("mongodb+srv://jimmywhite87:Ruger2012@charged-up.yt7ie.mongodb.net/charged-up?retryWrites=true&w=majority")
 db = CLIENT.test
 
 ALLOWED_HOSTS = ['*']
