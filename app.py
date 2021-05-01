@@ -4,6 +4,7 @@ from flask_pymongo import PyMongo
 client = PyMongo.MongoClient("mongodb+srv://jimmywhite87:Ruger2012!?@charged-up.yt7ie.mongodb.net/charged-up?retryWrites=true&w=majority")
 db = client.test
 
+ALLOWED_HOSTS = ['*']
 # Create an instance of Flask
 app = Flask(__name__)
 
