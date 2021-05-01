@@ -1,4 +1,4 @@
-const source = "assets/data/ElectricCarData_Clean.csv";
+const source = "static/data/ElectricCarData_Clean.csv";
 var ctx = document.getElementById('myChart');
 
 function init() {

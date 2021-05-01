@@ -12,7 +12,7 @@ var svg = d3.select("#graph")
   .append("g")
     .attr("transform", "translate(" + (width / 2 + margin.left) + "," + (height / 2 + margin.top) + ")");
 
-d3.csv("assets/data/ElectricCarData_Clean.csv").then(data => {
+d3.csv("static/data/ElectricCarData_Clean.csv").then(data => {
   data.sort(function(a,b) { return a.Range_Km - b.Range_Km; });
   var x = d3.scaleBand()
     .range([0, 2* Math.PI])
