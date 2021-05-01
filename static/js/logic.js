@@ -43,7 +43,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?acce
   zIndex: 0
 }).addTo(map2);
 
-d3.json("assets/data/allSites.json").then(function(response) {
+d3.json("static/data/allSites.json").then(function(response) {
   var list = response;
   var newList = response.map((d, i) => d.address.country)
   let unique = [...new Set(newList)]

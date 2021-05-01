@@ -16,8 +16,8 @@
       <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Bootstrap core CSS -->
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lookforward@0.1.1/css/lookforward.min.css">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -36,7 +36,11 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="assets/static/css/sidebars.css" rel="stylesheet">
+    <link href="static/css/sidebars.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body>
 
@@ -99,26 +103,26 @@
   </symbol>
 </svg>
 
-<div class="d-flex flex-column p-3 text-white bg-dark" style="width: 280px;">
+<div class="d-flex flex-column p-3 text-white bg-dark animate__animated animate__fadeIn" style="width: 280px;">
   <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
     <span class="fs-4">Charged Up</span>
   </a>
   <hr>
-  <ul class="nav nav-pills flex-column mb-auto">
+  <ul class="nav nav-pills flex-column mb-auto animate__animated animate__fadeIn">
     <li class="nav-item">
-      <a href="index.html" class="nav-link text-white">
+      <a href="{{ url_for('home') }}" class="nav-link text-white">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
         Home
       </a>
     </li>
     <li>
-      <a href="carinfo.html" class="nav-link text-white">
+      <a href="{{ url_for('carinfo') }}" class="nav-link text-white">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
         Cars
       </a>
     </li>
     <li>
-      <a href="charging.html" class="nav-link active">
+      <a href="{{ url_for('charging') }}" class="nav-link active">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
         Charging Stations
       </a>
@@ -130,21 +134,21 @@
 <div class="b-example-divider"></div>
 
 <div class="container gy-10">
-  <div class="p-0 mb-4 bg-light rounded-3 border justify-content-center">
+  <div class="p-0 mb-4 bg-light rounded-3 border justify-content-center animate__animated animate__fadeInUpBig">
     <div class="row align-items-md-stretch">
       <div class="col">
-        <div class="h-100 p-5 bg-dark text-white rounded-3 justify-content-center">
+        <div class="h-100 p-5 bg-dark text-white border rounded-3 justify-content-center animate__animated animate__fadeInUpBig">
       <h1 class="display-5 fw-bold"><center>Charging Stations</center></h1>
       <ul class="nav alert-secondary justify-content-center mb-auto">
   <li class="nav-item">
-    <a class="nav-link link-dark" aria-current="page" href="charging.html">Maps</a>
+    <a class="nav-link link-dark" aria-current="page" href="{{ url_for('charging') }}" class="js-lookforward" data-transition-enter="slideup" data-transition-leave="slidedown">Maps</a>
   </li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="row align-items-md-stretch">
+<div class="row align-items-md-stretch animate__animated animate__fadeInUpBig">
 <div class="col"><center>
 <div class="h-100 p-5 bg-light border rounded-3">
 <center>
@@ -154,35 +158,37 @@
 </div></div>
 <div class="col">
 
-<div class="h-100 p-5 bg-light border rounded-3">
+<div class="h-100 p-5 bg-light border rounded-3 animate__animated animate__fadeInUpBig">
   <center><h3 class="panel-title">United Kingdom</h3>
 <div id="map1" style="width: 400px; height: 300px; position: relative;">
 </div></div></div></div>
-<div class="row align-items-md-stretch py-5">
+<div class="row align-items-md-stretch py-5 animate__animated animate__fadeInUpBig">
 <div class="col"><center>
-<div class="h-100 p-5 bg-light border rounded-3">
+<div class="h-100 p-5 bg-light border rounded-3 animate__animated animate__fadeInUpBig">
 <center>
   <h3 class="panel-title">Canada</h3>
 <div id="map2" style="width: 400px; height: 300px; position: relative;">
 </center>
 </div></div>
 <div class="col"><center>
-<div class="h-100 p-5 bg-light border rounded-3">
+<div class="h-100 p-5 bg-light border rounded-3 animate__animated animate__fadeInUpBig">
 <center>
   <h3 class="panel-title">Canada</h3>
 <div id="map2" style="width: 400px; height: 300px; position: relative;">
 </center>
 </div></div>
-
+<select id="selDataset" onchange="optionChanged(this.value)" class="form-select form-select-sm w-50"></select></center>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
       crossorigin=""></script>
       <script src="https://d3js.org/d3.v6.min.js"></script>
-      <script type="text/javascript" src="assets/static/js/config.js"></script>
-      <script type="text/javascript" src="assets/static/js/logic.js"></script>
+      <script type="text/javascript" src="static/js/config.js"></script>
+      <script type="text/javascript" src="static/js/logic.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/static/js/sidebars.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/sidebars.js"></script>
+    <script src="https://unpkg.com/lookforward@0.1.1/js/lookforward.min.js"></script>
+    <script type="text/javascript" src="static/js/sorting.js">
   </body>
 </html>

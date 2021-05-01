@@ -2,7 +2,7 @@ var ctx = document.getElementById('myChart');
 
 
 
-d3.csv("assets/data/ElectricCarData_Clean.csv").then(data => {
+d3.csv("static/data/ElectricCarData_Clean.csv").then(data => {
 
 // console.log(data.Brand);
 var dropdownIds = data.map(d => d.Brand);
@@ -66,7 +66,7 @@ var dropdown = d3.select("#selDataset");
 var dataset = dropdown.property("value");
 
 function optionChanged (dataset) {
-  d3.csv("assets/data/ElectricCarData_Clean.csv").then(data => {
+  d3.csv("static/data/ElectricCarData_Clean.csv").then(data => {
     var newData = data.filter(a => a.Brand == dataset);
     var chart = Chart.getChart("myChart");
     d3.selectAll("#selDataset").on("change", chart.destroy());
