@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 from boto.s3.connection import S3Connection
-s3 = S3Connection(os.environ['S3_KEY'], os.environ['S3_SECRET'])
+s3 = S3Connection(os.environ['jimmywhite87'], os.environ['Ruger2012!?'])
 
 # Create an instance of Flask
 app = Flask(__name__)
