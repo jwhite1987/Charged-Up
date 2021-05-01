@@ -1,14 +1,21 @@
 source = "static/data/allSites.json"
 
 d3.json(source).then((d, i) => {
-  // var list = d.map(d => d.address.state);
-  // console.log(list)
   var usaData = d.filter(d => d.address.country == 'USA');
   var newStates = d3.group(usaData, a => a.address.state)
   var newLog = (newStates.get("CA"))
 
 
+<<<<<<< Updated upstream
   console.log(newLog)
+=======
+  console.log(
+
+
+[... new Set(usaData.map(obj=>obj['address']['state']))].forEach(state=>d3.select('select').append('option').text(state))
+
+  )
+>>>>>>> Stashed changes
 
 
 
