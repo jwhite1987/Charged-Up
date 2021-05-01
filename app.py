@@ -47,17 +47,9 @@ def radial():
 
 @app.route("/new")
 def new():
-<<<<<<< Updated upstream
 
     # Return template and data
     return render_template("new.html")
-
-=======
->>>>>>> Stashed changes
-
-    # Return template and data
-    return render_template("new.html")
-
 
 if __name__ == "__main__":
     app.run(debug=True)
