@@ -1,4 +1,4 @@
-source = "assets/data/allSites.json"
+source = "static/data/allSites.json"
 
 d3.json(source).then((d, i) => {
   // var list = d.map(d => d.address.state);
@@ -8,7 +8,7 @@ d3.json(source).then((d, i) => {
   var newLog = (newStates.get("CA"))
 
 
-  console.log(newLog[0].status)
+  console.log(newLog)
 
 
 

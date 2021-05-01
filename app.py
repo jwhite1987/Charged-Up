@@ -43,6 +43,12 @@ def radial():
     # Return template and data
     return render_template("radial.html")
 
+@app.route("/new")
+def new():
+
+    # Return template and data
+    return render_template("new.html")
+
 
 
 
