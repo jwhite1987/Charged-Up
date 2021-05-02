@@ -1,15 +1,11 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
-from scout_apm.flask import ScoutApm
 
-# Setup a flask 'app' as normal
 
-# Attach ScoutApm to the Flask App
-ScoutApm(app)
 app = Flask(__name__)
 
 # Use PyMongo to establish Mongo connection
-mongo = PyMongo(app, uri="mongodb://localhost:27017/charged_up")
+mongo = PyMongo(app, uri="mongodb+srv://jimmywhite87:Ruger2012@charged-up.yt7ie.mongodb.net/charged-up?retryWrites=true&w=majority")
 
 
 # Route to render index.html template using data from Mongo
@@ -17,7 +13,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/charged_up")
 def home():
 
     # Find one record of data from the mongo database
-    charged_up = mongo.db.collection.find_one()
+    # charged_up = mongo.db.collection.find_one()
 
     # Return template and data
     return render_template("index.html")
