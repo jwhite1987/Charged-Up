@@ -31,6 +31,12 @@ def charging():
     # Return template and data
     return render_template("charging.html")
 
+@app.route("/chargingstations")
+def chargingstations():
+
+    # Return template and data
+    return render_template("chargingstations.html")
+
 @app.route("/manufacturers")
 def manufacturers():
 
