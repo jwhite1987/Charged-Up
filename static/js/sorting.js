@@ -6,16 +6,16 @@ d3.json(source).then((d, i) => {
   var newLog = (newStates.get("CA"))
 
 
-<<<<<<< Updated upstream
+
   console.log(newLog)
-=======
+
   console.log(
 
 
 [... new Set(usaData.map(obj=>obj['address']['state']))].forEach(state=>d3.select('select').append('option').text(state))
 
   )
->>>>>>> Stashed changes
+
 
 
 
