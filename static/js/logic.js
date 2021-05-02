@@ -49,6 +49,7 @@ d3.json("static/data/allSites.json").then(function(response) {
   let unique = [...new Set(newList)]
   console.log(unique)
 
+
   for (var index = 0; index < list.length; index++) {
     var charging = response[index].gps;
     if (response[index].address.country == 'USA') {

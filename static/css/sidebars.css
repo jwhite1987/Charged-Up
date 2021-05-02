@@ -1,10 +1,10 @@
 body {
   display: flex;
   flex-wrap: nowrap;
-  height: 100vh;
-  height: -webkit-fill-available;
+  height: 100%
+  /* height: -webkit-fill-available; */
   overflow-x: auto;
-  /* overflow-y: hidden; */
+  /* overflow-y: hidden;  */
 }
 body > * {
   flex-shrink: 0;
