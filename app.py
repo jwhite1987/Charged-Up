@@ -1,11 +1,11 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
-# from pymongo import MongoClient
-# CLIENT = MongoClient("mongodb+srv://jimmywhite87:Ruger2012@charged-up.yt7ie.mongodb.net/charged-up?retryWrites=true&w=majority")
-# db = CLIENT.test
-#
-# ALLOWED_HOSTS = ['*']
-# Create an instance of Flask
+from scout_apm.flask import ScoutApm
+
+# Setup a flask 'app' as normal
+
+# Attach ScoutApm to the Flask App
+ScoutApm(app)
 app = Flask(__name__)
 
 # Use PyMongo to establish Mongo connection
