@@ -4,7 +4,7 @@ body {
   height: 100vh;
   height: -webkit-fill-available;
   overflow-x: auto;
-  /* overflow-y: hidden;  */
+  overflow-y: hidden; 
 }
 body > * {
   flex-shrink: 0;
