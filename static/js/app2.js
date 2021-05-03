@@ -1,6 +1,6 @@
 var margin = {top: 100, right: 0, bottom: 0, left: 0},
-  width = 800 - margin.left - margin.right,
-  height = 500 - margin.top - margin.bottom,
+  width = 600 - margin.left - margin.right,
+  height = 300 - margin.top - margin.bottom,
   innerRadius = 25,
   outerRadius = Math.min(width, height) / 2;
 
@@ -8,7 +8,7 @@ var svg = d3.select("#graph")
   .append("svg")
     // .attr("width", width + margin.left + margin.right)
     // .attr("height", height + margin.top + margin.bottom)
-    .attr("viewBox", `0 0 800 600`)
+    .attr("viewBox", `0 0 600 375`)
   .append("g")
     .attr("transform", "translate(" + (width / 2 + margin.left) + "," + (height / 2 + margin.top) + ")");
 
@@ -49,8 +49,8 @@ d3.csv("static/data/ElectricCarData_Clean.csv").then(data => {
     .append("text")
       .text(function(d){return(`${d.Model}`)})
       .attr("transform", function(d) { return (x(d.Model) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
-      .style("font-size", "8px")
-      .style("font-weight", "bold")
+      .style("font-size", "6px")
+      // .style("font-weight", "bold")
       .attr("alignment-baseline", "middle")
 
 

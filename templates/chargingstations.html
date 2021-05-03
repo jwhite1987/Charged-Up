@@ -36,13 +36,13 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="static/css/sidebars.css" rel="stylesheet">
+    <link href="static/css/dashboard.css" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   </head>
-  <body class="bg-light bg-gradient">
+  <body>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -103,59 +103,58 @@
   </symbol>
 </svg>
 
-<div class="d-flex flex-column p-3 text-white bg-dark animate__animated animate__fadeIn" style="width: 280px;">
-  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-1 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Charged Up</a>
+</header>
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse animate__animated animate__fadeInUpBig">
+      <div class="position-sticky pt-3">
 
-    <span class="fs-4">Charged Up</span>
-  </a>
-  <hr>
-  <ul class="nav nav-pills flex-column mb-auto animate__animated animate__fadeIn">
+  <ul class="nav flex-column mb-auto animate__animated animate__fadeIn">
     <li class="nav-item">
-      <a href="{{ url_for('home') }}" class="nav-link text-white">
+      <a href="{{ url_for('home') }}" class="nav-link">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
         Home
       </a>
     </li>
     <li>
-      <a href="{{ url_for('carinfo') }}" class="nav-link active">
+      <a href="{{ url_for('carinfo') }}" class="nav-link">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
         Cars
       </a>
     </li>
     <li>
-      <a href="{{ url_for('charging') }}" class="nav-link text-white">
+      <a href="{{ url_for('charging') }}" class="nav-link active">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
         Charging Stations
       </a>
     </li>
   </ul>
-
 </div>
+</nav>
 
-<div class="b-example-divider"></div>
 
-<div class="container gy-10">
-  <div class="p-0 mb-4 bg-light rounded-3 border justify-content-center animate__animated animate__fadeInUpBig">
-    <div class="row align-items-md-stretch">
-      <div class="col">
-        <div class="h-100 p-5 bg-dark text-white rounded-3 justify-content-center animate__animated animate__fadeInUpBig">
-      <h1 class="display-5 fw-bold"><center>Charging Stations</h1>
-				<ul class="nav alert-secondary justify-content-center mb-auto">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 animate__animated animate__fadeInUpBig">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h4">Dashboard</h1>
+          </div>
+
+				<ul class="nav alert-secondary justify-content-center mb-auto h6">
 		<li class="nav-item">
 			<a class="nav-link link-dark" aria-current="page" href="{{ url_for('charging') }}">Maps</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link link-dark" aria-current="page" href="{{ url_for('chargingstations') }}">Charging Stations</a>
+			<a class="nav-link link-primary" aria-current="page" href="{{ url_for('chargingstations') }}">Charging Stations</a>
 		</li>
 	</ul>
-    </div>
-    </div>
-	</div>
-</div>
+
 <center>
+  <div class="p-1 mb-4 bg-light rounded-3 border animate__animated animate__fadeInUpBig">
+      <div class="container-fluid py-1">
   <div class="row align-items-md-stretch">
   <div class="col"><center>
-  <div class="h-100 p-5 bg-light border rounded-3 animate__animated animate__fadeInUpBig">
+  <!-- <div class="h-100 p-5 bg-light border rounded-3 animate__animated animate__fadeInUpBig"> -->
     Please Select A State
     <select id="selDataset" onchange="optionChanged(this.value)" class="form-select form-select-sm w-50"></select>
     <table class = "table table-light table-striped table-hover objectTable animate__animated animate__fadeInUpBig">
