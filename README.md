@@ -1,52 +1,42 @@
-<h1 align="center">
+# `Charged Up`
 
-Welcome to Charged Up 👋
+## The App
+- [App](https://charged-up.herokuapp.com)
 
-</h1>
-<p>
-<img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+## Project Description
 
-<a href="None/graphs/commit-activity" target="_blank"><img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
-
-
-</p>
-
-> The team will take EV (Electric Vehicle) Charging station data and show the efficiences of different EV model would perform traveling across the country. With the world shifting towards a more sustainable and environmentally friendly way of living we wanted to do a breakdown of how practical owning an electric vehicle would be with infastructure supporting it today. We will discuss which vehicles are most efficient, have the most range, and areas that would most likely benefit you owning an electric vehicle.
-### 🏠 [Homepage](https://charged-up.herokuapp.com)
-### ✨ [Demo](https://charged-up.herokuapp.com)
-## Install
-```sh
-None
-
-```
-
-## Usage
-```sh
-Visit the Demo or Homepage Above
-
-```
-
-## Run tests
-```sh
-None
-
-```
-
-## Author
-👤 **Jimmy White, Zack Rogers, Akanksha Kukhraniya, Mariam Ahmad**
-* Website: http://www.jwhiteanalytics.com
-
-* GitHub: [@jimmywhite1987](https://github.com/{github_username})
+-  The goal of this project is for the team to take EV (Electric Vehicle) Charging station data and show the efficiencies of different EV model would perform traveling across the country.
+- With the world shifting towards a more sustainable and environmentally friendly way of living, a breakdown of how practical owning an electric vehicle would be with infrastructure supporting it today is important to explore.
+- Finally, using Heroku as well as Jupyter Notebook, Python, and PyMongo, develop an app that is user-friendly and responsive to display trends and relationships among the dataset.
 
 
+## Languages & Technology Used
 
+- MongoDB
+- PyMongo
+- Jupyter Notebook
+- Python
+- Pandas
+- Flask
+- Heroku
 
+## Screenshots
+![image](/Images/screenshot1.png)
 
-## Show your support
-Give a ⭐️ if this project helped you!
-## Credits
-**[None](None)**
+![image](/Images/screenshot2.png)
 
+![image](/Images/screenshot3.png)
 
----
-_This README was created with the [markdown-readme-generator](https://github.com/pedroermarinho/markdown-readme-generator)_
+![image](/Images/screenshot4.png)
+
+![image](/Images/screenshot5.png)
+
+![image](/Images/screenshot6.png)
+
+![image](/Images/screenshot7.png)
+
+![image](/Images/screenshot8.png)
+
+## Links
+- [JWhiteAnalytics.com](https://jwhiteanalytics.com)
+- [LinkedIn](https://www.linkedin.com/in/jimmywhite1987)
