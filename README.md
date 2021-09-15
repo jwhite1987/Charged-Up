@@ -37,6 +37,13 @@
 
 ![image](/Images/screenshot8.png)
 
+## Team Members
+
+- Jimmy White
+- Akanksha K
+- Zack Rogers
+- Miriam Assad
+
 ## Links
 - [JWhiteAnalytics.com](https://jwhiteanalytics.com)
 - [LinkedIn](https://www.linkedin.com/in/jimmywhite1987)
