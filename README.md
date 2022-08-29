@@ -42,10 +42,10 @@
 - Jimmy White
 - Akanksha K
 - Zack Rogers
-- Miriam Assad
+- Mariam Ahmad
 
 ## Links
 - [JWhiteAnalytics.com](https://jwhiteanalytics.com)
-- [LinkedIn](https://www.linkedin.com/in/jimmywhite1987)
-- [Full Resume](https://jwhiteanalytics.com/JWhite%20Resume.pdf)
+- [LinkedIn](https://www.linkedin.com/in/jwhite1987)
+- [Full Resume](https://jwhiteanalytics.com/JWhite%20DataAnalyst.pdf)
 - [GitLab](https://gitlab.com/jimmywhite1987)
