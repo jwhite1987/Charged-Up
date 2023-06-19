@@ -1,7 +1,7 @@
 # `Charged Up`
 
 ## The App
-- [App](https://charged-up.herokuapp.com)
+- App Temporarily Disabled for Maintenance
 
 ## Project Description
 
