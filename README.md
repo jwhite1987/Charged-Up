@@ -1,7 +1,8 @@
 # `Charged Up`
 
 ## The App
-- App Temporarily Disabled for Maintenance
+- [The App!](https://charged-up.herokuapp.com/)
+- [Tableau Visualization](https://public.tableau.com/app/profile/j.white1987)
 
 ## Project Description
 
